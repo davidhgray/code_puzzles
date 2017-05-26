@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<script>
+// SUM AN ARRAY OF NUMBERS
+function doMath(myNumbers) {
+  sum = 0;
+  for (i=0; i < myNumbers.length; i++) {
+    sum = sum + myNumbers[i];
+    }
+    if (i = myNumbers.length) {
+        console.log(sum);
+}
+}
+
+doMath([12,22,33,44,55,566]);
+
+// SUM OF INCREMENTS
+function startEnd(start, end, inc) {
+  var total = 0;
+  for (var i = start; i < end; i+=inc) {
+    total += i;
+  }
+  return total;
+}
+console.log(startEnd(3,21,4));
+
+// MIN AND MAX VALUES OF AN ARRAY
+// here's the array
+var a = [900, 50, 10200, 10200];
+//MIN INDEX
+function min(arr) {
+  var idx = 0; //index of the smallest
+  for (var i = 1; i < arr.length; i++){
+    if (arr[i] < arr[idx]) {
+      idx = i;
+  }
+}
+return idx;
+}
+
+console.log("min", min(a))
+
+//MAX INDEX
+function max(arr) {
+  var idx = 0; //will tell the computer to start at the beginning of the array
+  for (var i = 1; i < arr.length; i++){
+    if (arr[i] > arr[idx]) {
+      idx = i;
+  }
+}
+return idx;
+}
+
+console.log("max", max(a))
+
+REPEAT A STRING
+function makeString(text, numTimes) {
+words = "";
+  for(i=0; i < numTimes; i++) {
+    words = words + text;
+  }
+  return words;
+}
+console.log(makeString("apple", 10))
+
+// FIND THE FACTORS OF AN INTEGER
+function findFactors(myInteger) {
+  var factors = [];
+  for (var i = 2; i < myInteger; i++) {
+    if (myInteger%i == 0) {
+      factors.push(i)
+    }
+  }
+  return factors;
+}
+console.log(findFactors(18));
+
+// RANDOM NUMBERS WITHIN A RANGE
+function getRandom(min,max) {
+  var min = Math.ceil(min);
+  var max = Math.floor(max);
+  var newRand = Math.random() * (max - min + 1) + min;
+  return newRand;
+}
+  console.log(getRandom(5.23,10001.999));
+
+// RANDOM ELEMENT FROM AN ARRAY
+function getRandEl(integers) {
+  var randNum = Math.floor(Math.random() * integers.length);
+  return integers[randNum];
+}
+console.log(getRandEl([2, 876]));
+
+// COUNT OCCURRENCES OF A CHARACTER IN A STRING
+function getChar(textBody, char) {
+  var counter = 0;
+  for (var i = 0; i < textBody.length; i++) {
+    if (textBody[i] === char) {
+      counter++;
+    }
+  }
+  return counter;
+}
+console.log(getChar("a man a plan a canal bbbbbbbb", "b"));
+
+</script>
+</html>
